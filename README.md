@@ -1,5 +1,8 @@
 # README
 
+## Current build status:
+![Build Status](https://github.com/BlueTufa/interview_project/workflows/Ruby/badge.svg)
+
 ## Goal
 
 This goal of this interview is to learn more about what it would be like to work together, especially:
