@@ -10,26 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_09_065842) do
-
+ActiveRecord::Schema.define(version: 20_210_109_065_842) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "exercise_assignments", force: :cascade do |t|
-    t.bigint "member_id"
-    t.string "exercise_id"
-    t.datetime "completed_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["member_id"], name: "index_exercise_assignments_on_member_id"
+  create_table 'exercise_assignments', force: :cascade do |t|
+    t.bigint 'member_id'
+    t.string 'exercise_id'
+    t.datetime 'completed_at'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['member_id'], name: 'index_exercise_assignments_on_member_id'
   end
 
-  create_table "members", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "date_of_birth"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'members', force: :cascade do |t|
+    t.string 'first_name'
+    t.string 'last_name'
+    t.string 'date_of_birth'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end

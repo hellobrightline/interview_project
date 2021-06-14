@@ -13,11 +13,11 @@
 #
 #  index_exercise_assignments_on_member_id  (member_id)
 #
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe ExerciseAssignment, type: :model do
-  describe "#exercise" do
-    it "loads the correct exercise based on the assigned id" do
+  describe '#exercise' do
+    it 'loads the correct exercise based on the assigned id' do
       member = FactoryBot.create(:member)
       exercise_id = Exercise.ids.sample
 
