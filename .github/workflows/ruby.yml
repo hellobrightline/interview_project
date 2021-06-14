@@ -42,8 +42,8 @@ jobs:
       uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
       env:
         POSTGRES_HOST: localhost
-        POSTGRES_USER: root
-        POSTGRES_PASSWORD: secret # TODO: change to github secret here
+        POSTGRES_USERNAME: postgres
+        POSTGRES_PASSWORD: postgres # TODO: change to github secret here
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
