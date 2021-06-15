@@ -1,0 +1,27 @@
+---
+version: "3.3"
+services:
+  postgres:
+    hostname: postgres-db
+    container_name: postgres-db
+    image: postgres:12
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=interview_development
+    volumes:
+      - /data/docker/postgres:/var/lib/postgresql/data/
+  interviewapp:
+    depends_on: 
+      - postgres
+    image: railsapp:latest
+    container_name: interviewapp
+    hostname: interviewapp
+    command: bash -c "rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      - ALLOWED_HOSTS=saltmine.local
+      - POSTGRES_HOST=postgres-db
+    ports:
+      - 3000:3000

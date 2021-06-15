@@ -6,13 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-250.times do |i|
-  name = Faker::FunnyName.two_word_name.split(" ")
+250.times do |_i|
+  name = Faker::FunnyName.two_word_name.split(' ')
   Member.create(first_name: name.first, last_name: name.last, date_of_birth: Faker::Date.birthday)
 end
 
 (2..7).each do |i|
   Member.where("id % #{i} = 0").each do |member|
-    ExerciseAssignment.create(member: member, exercise_id: Exercise.ids.sample, completed_at: [Faker::Date.backward, nil].sample)
+    ExerciseAssignment.create(member: member, exercise_id: Exercise.ids.sample,
+                              completed_at: [Faker::Date.backward, nil].sample)
   end
 end
