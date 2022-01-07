@@ -26,13 +26,7 @@ If you have worked with Ruby on Rails recently, you shouldn't need to spend more
 
 ## Overview
 
-As part of treatment, our clinical team assigns "homework" to our members in the form of exercises.
-
-The rough plan is to build a RESTful API that allows our clinical team to assign homework to our members as needed. The API will use the data model described below.
-
-We'll spend the first few minutes of the interview answering any questions you might have about the data model. After that we are going to go over the specific requirements and then start implementing the API.
-
-We will introduce some new requirements during the interview, so be ready to alter or extend the data model below.
+We'll spend the first few minutes of the interview answering any questions you might have about the data model. After that we are going to go over the specific requirements for the interview problem. Be ready to alter or extend the data model below.
 
 ## The data model
 
