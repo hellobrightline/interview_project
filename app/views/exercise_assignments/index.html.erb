@@ -3,12 +3,17 @@
 <ul class="space-y-2">
   <% @exercise_assignments.each do |exercise_assignment| %>
     <li class="border p-4">
-      <p class="text-lg">
+      <h2 class="text-lg">
         <%= exercise_assignment.exercise.title %>
-      </p>
+      </h2>
       <p class="text-sm text-gray-600">
         Assigned to: <%= exercise_assignment.member.full_name %>
       </p>
+      <% if exercise_assignment.completed_at? %>
+        <div class="badge bg-green-400">Completed</div>
+      <% else %>
+        <div class="badge bg-orange-300">Incomplete</div>
+      <% end %>
     </li>
   <% end %>
 </ul>
