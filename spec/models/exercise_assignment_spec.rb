@@ -2,13 +2,13 @@
 #
 # Table name: exercise_assignments
 #
-#  id           :bigint           not null, primary key
+#  id           :integer          not null, primary key
 #  completed_at :datetime
-#  data         :jsonb
+#  data         :json
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  exercise_id  :string
-#  member_id    :bigint
+#  member_id    :integer
 #
 # Indexes
 #

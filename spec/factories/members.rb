@@ -2,7 +2,7 @@
 #
 # Table name: members
 #
-#  id            :bigint           not null, primary key
+#  id            :integer          not null, primary key
 #  date_of_birth :string
 #  first_name    :string
 #  last_name     :string
