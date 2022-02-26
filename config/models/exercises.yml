@@ -10,35 +10,44 @@ all_about_me:
   title: All About Me
   kind: digital_exercise
   duration_in_minutes: 10
+  icon: notification_important
 behavior_observation_chart:
   title: Behavior Observation Chart
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: pending_actions
 body_map:
   title: Body Map
   kind: digital_exercise
   duration_in_minutes: 10
+  icon: accessibility
 learning_to_relax:
   title: Learning to Relax
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: self_improvement
 making_a_plan:
   title: Making a Plan
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: checklist
 self_esteem_journal:
   title: Self Esteem Journal
   kind: digital_exercise
   duration_in_minutes: 10
+  icon: auto_stories
 sleep_calculator_kids:
   title: Sleep calculator (for kids)
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: bedtime
 sleep_calculator_teens:
   title: Sleep calculator (for teens)
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: bedtime
 thinking_feeling_doing:
   title: Thinking Feeling Doing
   kind: digital_exercise
   duration_in_minutes: 5
+  icon: psychology

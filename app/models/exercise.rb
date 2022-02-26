@@ -1,6 +1,6 @@
 EXERCISE_CONFIG_PATH = Rails.root.join("config", "models", "exercises.yml")
 
-Exercise = Struct.new(:id, :kind, :title, :duration_in_minutes, keyword_init: true) {
+Exercise = Struct.new(:id, :kind, :title, :duration_in_minutes, :icon, keyword_init: true) {
   def self.config
     @config ||= YAML.safe_load(ERB.new(File.read(EXERCISE_CONFIG_PATH)).result).symbolize_keys
   end
