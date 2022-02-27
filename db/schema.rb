@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2021_10_20_212234) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_27_141355) do
   create_table "exercise_assignments", force: :cascade do |t|
     t.integer "member_id"
     t.string "exercise_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_10_20_212234) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "data", default: {}
+    t.datetime "due_by", precision: nil
     t.index ["member_id"], name: "index_exercise_assignments_on_member_id"
   end
 
