@@ -1,8 +1,10 @@
 class ExerciseAssignmentsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_exercise_assignment, only: [:show, :destroy, :update]
 
   def index
-    @exercise_assignments = ExerciseAssignment.all
+    @pagy, @exercise_assignments = pagy(ExerciseAssignment.all.order(created_at: :desc), items: 12)
 
     respond_to do |format|
       format.html

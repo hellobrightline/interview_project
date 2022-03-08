@@ -6,4 +6,17 @@
   .badge {
     @apply inline-block text-xs mt-2 px-4 py-1 rounded-full;
   }
+
+  .pagy-nav.pagination {
+    @apply my-16 text-center;
+  }
+
+  .pagy-nav .page {
+    @apply p-2 border border-gray-300;
+  }
+
+  .pagy-nav .page.active,
+  .pagy-nav .page.disabled {
+    @apply border-none;
+  }
 }
