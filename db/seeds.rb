@@ -23,7 +23,7 @@ end
       member: member,
       exercise_id: Exercise.ids.sample,
       completed_at: [Faker::Date.backward, nil].sample,
-      due_by: rand > 0.5 ? Faker::Date.forward(days: 30) : nil
+      due_by: rand > 0.5 ? Faker::Date.between(from: 30.days.ago, to: 30.days.from_now) : nil
     )
   end
 end
