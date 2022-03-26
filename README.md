@@ -6,27 +6,33 @@ This goal of this interview is to learn more about what it would be like to work
 
 - How you break down complex problems
 - Your knowledge of web applications in general and Ruby on Rails in particular
-- What it's like to pair program with you for a couple hours, which is something we do relatively often as a team
+- What it's like to pair program with you for a couple of hours, which is something we do relatively often as a team
+
+We are excited to work with folks transitioning from other stacks, but we'll be working on a Rails-based project for this interview. If you are more familiar with another stack, we will help you translate the idioms and concepts during the interview. :)
 
 ## How to prepare
 
-- Read the sections below and take a glance at the data model
-- Make sure you can run the applications and test suite of this project (PostgreSQL is required)
+- Read the sections below and take a glance at the models, views, and controllers
+- Make sure you can run the application and test suite of this project
 
 If you have worked with Ruby on Rails recently, you shouldn't need to spend more than 15-20 minutes to prepare for the interview.
 
 ## Running the project
 
-1. Make sure PostgreSQL is installed on your machine
-   - See `config/database.yml` for the default values and override if needed
-2. Run `bundle install` to install gem dependencies
-3. Run `rails db:setup` to create the dev/test databases and load the schema
-4. Run `rails server`
-5. Visit `localhost:3000` and ensure that you see the "You're on Rails!" page
+1. Run `bundle install` to install gem dependencies
+2. Run `rails db:setup` to create the dev/test databases, load the schema, and create some seed records
+3. Run `bin/dev`
+4. Visit `localhost:3000` and ensure that you see the "You're on Rails!" page
 
 ## Overview
 
-We'll spend the first few minutes of the interview answering any questions you might have about the data model. After that we are going to go over the specific requirements for the interview problem. Be ready to alter or extend the data model below.
+We'll spend the first few minutes of the interview answering any questions you might have about the project. After that we are going to go over the specific requirements for the interview problem.
+
+For our backend-leaning interview, be ready to extend the data model below to support a new feature.
+
+For our frontend-leaning interview, be ready to evolve the design of a page and add some new functionality to it.
+
+Note that this is a Rails 7 project, which means it uses `importmap` and `hotwire` (Turbo, Stimulus, etc) by default. We don't expect you to have any specific knowledge of these technologies, but they are available if you would like to use them for anything.
 
 ## The data model
 
@@ -41,8 +47,7 @@ At Brightline we assign homework to a `Member` in the form of an `ExerciseAssign
 
 ## How do Exercises work?
 
-We've omitted some lower-level details of Exercises that don't really apply to this scenario,
-such as a detailed UI. You can assume that ExerciseAssignments generally work as follows:
+We've omitted some lower-level details of `Exercises` that don't really apply to this scenario, such as per-exercise data schemas or permissions. You can assume that `ExerciseAssignments` generally work as follows:
 
 1. A member logs into their account and sees a list of active assignments
 2. They select an assignment and are presented with a multi-step UI for completing it
