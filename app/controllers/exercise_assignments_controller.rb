@@ -12,6 +12,14 @@ class ExerciseAssignmentsController < ApplicationController
     end
   end
 
+  def update
+    if @exercise_assignment.update(exercise_assignment_params)
+      render json: @exercise_assignment
+    else
+      render json: @exercise_assignment.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     def set_exercise_assignment
       @exercise_assignment = ExerciseAssignment.find(params[:id])
