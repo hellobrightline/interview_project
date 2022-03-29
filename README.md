@@ -1,5 +1,9 @@
 # README
 
+2022-03-28: We just made a big change to this project in order to start supporting a new frontend interview track. The project now uses Rails 7 + SQLite instead of Rails 6 + PostgreSQL.
+
+If you've already set things up with Rails 6 + PostgreSQL, no need to make any changes. Just wanted to call this out in case you see a mismatch between your local copy and this repo on GitHub.
+
 ## Goal
 
 This goal of this interview is to learn more about what it would be like to work together, especially:
