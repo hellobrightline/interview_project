@@ -38,3 +38,6 @@
 !/app/assets/builds/.keep
 
 .byebug_history
+
+# Ignore Jetbrains IDE stuff
+/.idea
