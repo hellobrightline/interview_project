@@ -1,14 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
-
-if ["s", "server"].include?(ARGV[0])
-  puts "*******************************************************************************************"
-  puts "*******                                                                             *******"
-  puts "*******    NOTE: Make sure you are running bin/dev or Tailwind JIT may not work.    *******"
-  puts "*******                                                                             *******"
-  puts "*******************************************************************************************"
-end
-
 APP_PATH = File.expand_path("../config/application", __dir__)
 require_relative "../config/boot"
 require "rails/commands"

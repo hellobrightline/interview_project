@@ -20,7 +20,7 @@
 #
 class ExerciseAssignment < ApplicationRecord
   belongs_to :member
-  enum status: {pending: "pending", completed: "completed"}
+  enum :status, {pending: "pending", completed: "completed"}
 
   validates :exercise_id, presence: true, inclusion: {in: Exercise.ids, allow_blank: true}
 
