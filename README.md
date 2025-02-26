@@ -33,16 +33,16 @@ For our backend-leaning interview, be ready to extend the data model below to su
 
 For our frontend-leaning interview, be ready to evolve the design of a page and add some new functionality to it.
 
-> Note that this is a Rails 7 project, which means it uses `importmap` and `hotwire` (Turbo, Stimulus, etc) by default. We don't expect you to have any specific knowledge of these technologies, but they are available if you would like to use them for anything.
+> Note that this is a Rails 8 project, which means it uses `importmap` and `hotwire` (Turbo, Stimulus, etc) by default. We don't expect you to have any specific knowledge of these technologies, but they are available if you would like to use them for anything.
 
 > Note that we tried to keep this application as simple as possible. This also means that there are some quirks and missing pieces - for example authentication.
-
 
 ## The application
 
 The application is divided into two main components:
-* A admin component used by our employees (people that work at Brightline)
-* A member component used by our members (people we provide care for)
+
+- A admin component used by our employees (people that work at Brightline)
+- A member component used by our members (people we provide care for)
 
 You can find the respective controllers for each component in `app/controllers/admin` and `app/controllers/members`.
 

@@ -15,12 +15,12 @@
 #
 # Indexes
 #
-#  index_exercise_assignments_on_exercise_id_and_member_id  (exercise_id,member_id) UNIQUE WHERE status = "pending"
+#  index_exercise_assignments_on_exercise_id_and_member_id  (exercise_id,member_id) UNIQUE WHERE status = 'pending'
 #  index_exercise_assignments_on_member_id                  (member_id)
 #
 class ExerciseAssignment < ApplicationRecord
   belongs_to :member
-  enum status: {pending: "pending", completed: "completed"}
+  enum :status, {pending: "pending", completed: "completed"}
 
   validates :exercise_id, presence: true, inclusion: {in: Exercise.ids, allow_blank: true}
 

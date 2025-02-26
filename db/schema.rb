@@ -10,22 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_10_224716) do
-  create_table "delayed_jobs", force: :cascade do |t|
-    t.integer "priority", default: 0, null: false
-    t.integer "attempts", default: 0, null: false
-    t.text "handler", null: false
-    t.text "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string "locked_by"
-    t.string "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-  end
-
+ActiveRecord::Schema[8.0].define(version: 2025_02_21_232301) do
   create_table "exercise_assignments", force: :cascade do |t|
     t.integer "member_id"
     t.string "exercise_id", null: false
@@ -34,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_10_224716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "response", default: {}
-    t.index ["exercise_id", "member_id"], name: "index_exercise_assignments_on_exercise_id_and_member_id", unique: true, where: "status = \"pending\""
+    t.index ["exercise_id", "member_id"], name: "index_exercise_assignments_on_exercise_id_and_member_id", unique: true, where: "status = 'pending'"
     t.index ["member_id"], name: "index_exercise_assignments_on_member_id"
   end
 
@@ -46,5 +31,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_10_224716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 end

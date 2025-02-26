@@ -3,25 +3,25 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
-gem "rails", "~> 7.0.2", ">= 7.0.2.2"
+ruby "3.4.2"
+gem "rails", "~> 8.0.1", ">= 8.0.1"
 
 gem "bootsnap", require: false
-gem "delayed_job_active_record"
+gem "solid_queue", "~> 1.1"
 gem "daemons"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pagy"
-gem "puma", "~> 5.0"
+gem "puma", "~> 6.4"
 gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 2.1"
 gem "stimulus-rails"
-gem "tailwindcss-rails"
+gem "tailwindcss-rails", "~> 3.3.1"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem "annotate"
+  gem "annotate", github: "hellobrightline/annotate_models"
   gem "awesome_print"
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
